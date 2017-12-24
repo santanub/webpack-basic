@@ -1,3 +1,5 @@
+import '../css/basic.css';
+
 import { secretButton, secretPara } from "./domSelector.js";
 var secretFalse = false;
 
