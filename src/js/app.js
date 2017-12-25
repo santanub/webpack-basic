@@ -1,21 +1,16 @@
-import '../css/basic.css';
+import '../css/basic.scss';
+import { RandomGenerator } from "./randomGenerator";
+import { buttonOne, buttonTwo, secretPara } from "./domSelector.js";
 
-import { secretButton, secretPara } from "./domSelector.js";
-var secretFalse = false;
 
-secretButton.addEventListener('click', toggleSecret);
 
-function toggleSecret(){
-    secretFalse = !secretFalse;
-    updatePara();
+const outPutRandomOne = () => {
+    secretPara.textContent = RandomGenerator.randomInteger();
 }
 
-function updatePara(){
-    if(secretFalse) {
-        secretPara.style.display = 'block';
-        secretButton.textContent = "Hide Secret";
-    } else {
-        secretPara.style.display = 'none';
-        secretButton.textContent = "Show Secret";
-    }
+const outPutRandomTwo = () => {
+    secretPara.textContent = RandomGenerator.randomRange(1,34);
 }
+
+buttonOne.addEventListener('click', outPutRandomOne);
+buttonTwo.addEventListener('click', outPutRandomTwo);

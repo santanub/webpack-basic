@@ -1,0 +1,23 @@
+@import 'color';
+
+#random-integer {
+    background-color: $main;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#random-range {
+    background-color: $secondary;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#secret-para {
+    text-align: center;
+    color: orangered;
+    //display: none;
+}
